@@ -1,0 +1,301 @@
+
+
+
+:root {
+  --tomato: #e65f78;
+}
+.act,
+.navbar .active ,.client .icon i{
+  color: var(--tomato) !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+/* ************************* */
+/* ********* arrow ********* */
+/* ************************* */
+.arrow {
+  background:var(--tomato);
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+/* ************************* */
+/* ******** loading ******** */
+/* ************************* */
+.loading{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+
+}
+.loader {
+    position: relative;
+    width: 164px;
+    height: 164px;
+  }
+  .loader::before , .loader::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--tomato);
+    left: 50%;
+    top: 50%;
+    animation: rotate 1s ease-in infinite;
+}
+.loader::after {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  animation: rotate 1s ease-in infinite, moveY 1s ease-in infinite ;
+}
+
+@keyframes moveY {
+  0% , 100% {top: 10%}
+  45% , 55% {top: 59%}
+  60% {top: 40%}
+}
+@keyframes rotate {
+  0% { transform: translate(-50%, -100%) rotate(0deg) scale(1 , 1)}
+  25%{ transform: translate(-50%, 0%) rotate(180deg) scale(1 , 1)}
+  45% , 55%{ transform: translate(-50%, 100%) rotate(180deg) scale(3 , 0.5)}
+  60%{ transform: translate(-50%, 100%) rotate(180deg) scale(1, 1)}
+  75%{ transform: translate(-50%, 0%) rotate(270deg) scale(1 , 1)}
+  100%{ transform: translate(-50%, -100%) rotate(360deg) scale(1 , 1)}
+}
+    
+/* ************************* */
+/* ********* Home ********** */
+/* ************************* */
+.navbar .nav-link {
+  transition: color 0.7s;
+}
+.navbar .nav-link:hover {
+  color: var(--tomato);
+}
+header {
+  background: url(../imgs/header-bg.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  background-size: 100% 100%;
+}
+header .layer {
+  background: rgba(0, 0, 0, 0.7);
+}
+header .caption p {
+  width: 40%;
+}
+header .caption a {
+  transition: color,background 0.7s;
+}
+header .caption a:hover {
+  color: black !important;
+  background: white;
+}
+header .scroll a {
+  position: absolute;
+  bottom: 5%;
+  border: 1px solid #eee;
+  width: 30px;
+  height: 60px;
+  animation: ascroll 2s linear infinite;
+}
+header .scroll a::after {
+  content: "";
+  position: absolute;
+  color: #eee;
+  bottom: 80%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 5px;
+  height: 8px;
+  background: #eee;
+  border-radius: 30%;
+  animation: btnscroll 2s linear infinite;
+}
+@keyframes ascroll {
+  25% {
+    bottom: 6%;
+  }
+  50% {
+    bottom: 7%;
+  }
+  75% {
+    bottom: 6%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+@keyframes btnscroll {
+  16% {
+    bottom: 60%;
+  }
+  33% {
+    bottom: 40%;
+  }
+  49% {
+    bottom: 20%;
+  }
+  65% {
+    bottom: 40%;
+  }
+  80% {
+    bottom: 60%;
+  }
+  100% {
+    bottom: 80%;
+  }
+}
+.setting {
+  top: 20%;
+}
+.setting .container_box li {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 30% 40% 0% 40%;
+}
+.setting .container_box img {
+  width: 25px;
+  height: 30px;
+  cursor: pointer;
+}
+.setting .icon {
+  background: #2b2424;
+}
+.setting p {
+  color: var(--tomato);
+}
+.setting .container_box {
+  padding: 5px 10px;
+}
+.setting .icon i {
+  color:white ;
+  font-size: 25px;
+  cursor: pointer;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ************************* */
+/* ******** about ********* */
+/* ************************* */
+.about .icon i {
+  font-size: 20px;
+}
+.about .icon i,
+.about .icon a,footer .icon i,footer .icon a {
+  transition: all 0.5s;
+}
+.about .icon a:hover,footer .icon a:hover {
+  border: 1px solid var(--tomato) !important;
+  color: var(--tomato) !important;
+}
+.about .icon a:hover i ,footer .icon a:hover i{
+  color: var(--tomato) !important;
+}
+/* ************************* */
+/* ******* Services ******** */
+/* ************************* */
+.services .items i {
+    color: var(--tomato);
+}
+.services .items .hr {
+    background: var(--tomato);
+    width: 40px;
+    height: 2px;
+    transition: all .5s;
+}
+.services .items:hover .hr {
+    width: 80px;
+}
+.freelance button {
+    background-color: var(--tomato)!important;
+}
+.client .carousel-indicators button{
+    background: var(--tomato);
+    height: 7px ;
+    width: 20px;
+    box-shadow: none;
+    border: none;
+    transition: width 1s;
+}
+.client .carousel-indicators .active{
+    width: 30px ; 
+}
+
+/* ************************* */
+/* ******* portfolio ******* */
+/* ************************* */
+
+.portfolio .layer{
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top:100%;
+  right: 100%;
+  transition: all .7s;
+  color: #eee;
+}
+.portfolio .info:hover .layer{
+  top:0;
+  right: 0;
+}
+
+.portfolio .info:hover img{
+ transition: all .7s;
+}
+.portfolio .info:hover img{
+ transform: scale(1.3);
+}
+
+.portfolio .nav-link {
+  color: black ;
+  font-weight: 500;
+}
+.portfolio .nav-pills .active{
+  background: var(--tomato);
+  color: #eee;
+}
+
+
+/* ************************* */
+/* ******* Contact ********* */
+/* ************************* */
+.contact input[type="submit"].btn-danger {
+  background: var(--tomato);
+  border: var(--tomato);
+}
+
+.contact .form-control:focus {
+  border-color: var(--tomato);
+  outline: 0;
+  box-shadow: 0 0 0 1px var(--tomato);
+  caret-color: var(--tomato);
+}
+/* ************************* */
+/* ***** Media Queries ***** */
+/* ************************* */
+
+/* navbar */
+@media screen and (min-width: 768px) {
+  .navbar .navbar-brand {
+    width: 30% !important;
+  }
+}
